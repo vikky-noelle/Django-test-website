@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Time Travel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Time Travel</h1>
+				<p>A Blog on time travel, sign up to get updates on the blog.<br>Visit The Home Page Right Now</p>
+            <form id="signup-form" method="post" action="{% url 'home' %}">
+          {% csrf_token %}
+          <input type="submit" value="Home" />
+        </form>
+      </header>
+      <h1>About The Author</h1>
+      <div class="transbox">
+        <p> WRITE ABOUT THE AUTHOR HERE</p>
+      </div>
+		<!-- Signup Form -->
+
+
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

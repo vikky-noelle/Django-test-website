@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Time Travel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+	</head>
+	<body class="is-preload" background="{%static 'images/11.jpeg'%}">
+
+		<!-- Header -->
+    <header id="header">
+      <form id="signup-form" method="post" action="{% url 'home' %}">
+        {% csrf_token %}
+        <input type="submit" value="Home" />
+      </form>
+    	<h1 align=center>Space And Time</h1>
+				<p>A Blog on time travel.<br>24 october 2017</p>
+
+  </header>
+  <div class="transbox">
+  <p> Every guy has a different opinion i am just stating mine. I see space and time very inter related and complexly beautiful .If you have read sir Einsteins theories you must have encountered the time travel subject intriguing and full of excitement of course you have seen movies revolving a round time travel, but sir Einstein placed the subject of time travel off charts. Most of you probably know the renowned   E=MC^2   term, well as he said to time travel one must have a speed of light which literally diminishes the mass of the respected body to zero. Of course not possible and here the scientist puts a full stop to the fantasies of time traveling.<br>Though, he did give another theory he stated if someone travels in space he might experience that time around him slows down. I am not a scientist, i am just a student, a philosopher fond of time, space and time traveling so can't give you enough proof though i have tried to find evidences but all i have is my brain my imagination and facts that a normal human being understands.
+
+The things i found were beyond my understanding. All Einsteins theories are mind boggling but  i did find an easy going example which i understood and in simple words :
+<br>" calculations show that it would take a rocket 10 years to reach the planet Pluto from earth and another 10 years to come back from Pluto to earth while the human experiences a time span of 20 years, a human on earth would experience around 50 years. "
+<br>
+INDEED AN AMAZING FACT, at-least for me
+so how do we put this in terms of time traveling, or is it even time traveling?
+In reference to that what i suggest is, it's a side effect of traveling in space maybe some unknown force or effect related to dark matter.
+<br><br>
+AT-LEAST  we know there's something to prove that we can use object phenomenon's to use time for our greater good.
+I will continue my findings in the next blog, till then sayonara my friends.</p>
+</div>
+
+		<!-- Signup Form
+			<form id="signup-form" method="post" action="#">
+				{% csrf_token %}
+				{{ form }}
+				<input type="submit" value="Sign Up" />
+			</form>
+			<h2>Read The Blog <br> Visit Our Fb And Instagram</h2>
+			<form id="signup-form" method="post" action="{% url 'blog' %}">
+				<input type="submit" value="Continue to the Blog Page" />
+			</form>
+      -->
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

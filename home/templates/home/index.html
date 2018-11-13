@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Time Travel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Time Travel</h1>
+				<p>A Blog on time travel, sign up to get updates on the blog.</p>
+			</header>
+
+		<!-- Signup Form -->
+			<form id="signup-form" method="post" action="{% url 'home'%}">
+				{% csrf_token %}
+				{{ form }}
+				<input type="submit" value="Sign Up" />
+			</form>
+			<h2>Read The Blog <br> Visit Our Fb And Instagram</h2>
+			<form id="signup-form" method="post" action="{% url 'blog' %}">
+				{% csrf_token %}
+				<input type="submit" value="Continue to the Blog Page" />
+			</form>
+				<h2>To Know About The Author, Click Below.</h2>
+			<form id="signup-form" method="post" action="{% url 'about' %}">
+				{% csrf_token %}
+				<input type="submit" value="About the author" />
+			</form>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+		<script>
+ 		$("#id_your_email").change(function () {
+	 		var your_email = $(this).val();
+
+	 	$.ajax({
+		 	url: '/ajax/validate_your_email/',
+		 	data: {
+			 	'your_email': your_email
+		 	},
+		 	dataType: 'json',
+		 		success: function (data) {
+			 	if (data.is_taken) {
+				 	alert("A user with this email already exists.");
+			 	}
+		 	}
+	 	});
+
+ 		});
+	</script>
+
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
